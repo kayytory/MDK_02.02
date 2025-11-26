@@ -1,0 +1,32 @@
+﻿<Window x:Class="Palkin_0202.AddRequest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Palkin_0202"
+        mc:Ignorable="d"
+        Title="Добавление заказа" Height="298" Width="340">
+    <Grid Height="274" VerticalAlignment="Center" HorizontalAlignment="Center" Width="340">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="169*"/>
+            <ColumnDefinition Width="171*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txtAmount" HorizontalAlignment="Left" Margin="30,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Column="1" PreviewTextInput="txtName_PreviewTextInput" Background="#FFBBDCFA" FontFamily="Bahnschrift Light SemiCondensed"/>
+        <ComboBox DisplayMemberPath="name" x:Name="cmbProduct" HorizontalAlignment="Left" Margin="30,96,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" BorderBrush="#FFBBDCFA" FontFamily="Bahnschrift Light SemiCondensed">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="#FFBBDCFA" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <ComboBox Background="#BBDCFA" DisplayMemberPath="name" x:Name="cmbPartner" HorizontalAlignment="Left" Margin="30,49,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" BorderBrush="#FFBBDCFA"/>
+        <Button Content="Назад" HorizontalAlignment="Left" Margin="57,220,0,0" VerticalAlignment="Top" Width="69" Click="Button_Click" Background="#FF0C4882" Foreground="White"/>
+        <Button x:Name="btnAdd"  Content="Добавить" HorizontalAlignment="Left" Margin="30,220,0,0" VerticalAlignment="Top" Width="81" Click="Button_Click_1" Grid.Column="1" Background="#FF0C4882" Foreground="White"/>
+        <Label Content="Партнер" HorizontalAlignment="Left" Margin="92,45,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift Light SemiCondensed"/>
+        <Label Content="Продукт" HorizontalAlignment="Left" Margin="93,96,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift Light SemiCondensed"/>
+        <Label Content="Количество" HorizontalAlignment="Left" Margin="75,155,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift Light SemiCondensed"/>
+        <Button x:Name="btnAddPartner" Grid.Column="1" Content="Добавить партнера" HorizontalAlignment="Left" Margin="30,24,0,0" VerticalAlignment="Top" Width="120" Background="#FF0C4882" Click="btnAddPartner_Click" Foreground="White" FontFamily="Bahnschrift Light SemiCondensed"/>
+
+    </Grid>
+</Window>
