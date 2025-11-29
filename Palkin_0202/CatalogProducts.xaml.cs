@@ -14,21 +14,19 @@ using System.Windows.Shapes;
 
 namespace Palkin_0202
 {
-    /// <summary>
-    /// Логика взаимодействия для CatalogProducts.xaml
-    /// </summary>
+
     public partial class CatalogProducts : Window
     {
         Entities entities = new Entities();
+        /// <summary>
+        /// Окно с каталогом продуктов
+        /// </summary>
         public CatalogProducts()
         {
             InitializeComponent();
-            Window_Loaded();
-        }
-        public void Window_Loaded()
-        {
             dgProducts.ItemsSource = entities.Products.ToList();
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

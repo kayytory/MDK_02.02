@@ -15,12 +15,13 @@ using System.Windows.Shapes;
 
 namespace Palkin_0202
 {
-    /// <summary>
-    /// Логика взаимодействия для MaterialCalc.xaml
-    /// </summary>
+
     public partial class MaterialCalc : Window
     {
         Entities entities = new Entities();
+        /// <summary>
+        /// Форма с расчетом стоимости материалов
+        /// </summary>
         public MaterialCalc()
         {
             InitializeComponent();
@@ -38,7 +39,14 @@ namespace Palkin_0202
             var calc = Calculate((cmbProduct.SelectedItem as Products).article, (cmbMaterial.SelectedItem as Material).id, Convert.ToInt32(txtAmount.Text), Convert.ToInt32(txtAmountInStock.Text));
             txtResult.Text = calc.ToString();
         }
-
+        /// <summary>
+        /// Метод 4 модуль
+        /// </summary>
+        /// <param name="prodID"></param>
+        /// <param name="matID"></param>
+        /// <param name="prodNeeded"></param>
+        /// <param name="prodInStock"></param>
+        /// <returns></returns>
         private int Calculate(string prodID, int matID, int prodNeeded, int prodInStock)
         {
             try

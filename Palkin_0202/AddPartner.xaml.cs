@@ -15,12 +15,13 @@ using System.Windows.Shapes;
 
 namespace Palkin_0202
 {
-    /// <summary>
-    /// Логика взаимодействия для AddPartner.xaml
-    /// </summary>
+
     public partial class AddPartner : Window
     {
         Entities entities = new Entities();
+        /// <summary>
+        /// Окно добавления партнера
+        /// </summary>
         public AddPartner()
         {
             InitializeComponent();

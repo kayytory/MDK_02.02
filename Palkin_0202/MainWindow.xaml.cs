@@ -20,7 +20,9 @@ namespace Palkin_0202
     /// </summary>
     public partial class MainWindow : Window
     {
-        //Класс для вывода листбокса
+        /// <summary>
+        /// Класс для листбокса
+        /// </summary>
         public class ViewPartners
         {
             public int id { get; set; }
@@ -36,6 +38,9 @@ namespace Palkin_0202
             public double costAll { get; set; }
         }
 
+        /// <summary>
+        /// Создание формы списка
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();

@@ -20,6 +20,9 @@ namespace Palkin_0202
         Entities entities = new Entities();
         Partner_products_request selectedItem;
 
+        /// <summary>
+        /// Окно добавления заявки
+        /// </summary>
         public AddRequest()
         {
             InitializeComponent();
